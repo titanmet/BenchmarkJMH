@@ -3,8 +3,11 @@ import org.openjdk.jmh.annotations.*;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.concurrent.TimeUnit;
 
 @Fork(1)
+@BenchmarkMode(Mode.AverageTime)
+@OutputTimeUnit(TimeUnit.MILLISECONDS)
 public class BenchJmh {
 
     @State(Scope.Benchmark)
